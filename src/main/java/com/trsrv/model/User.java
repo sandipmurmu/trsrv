@@ -2,10 +2,13 @@ package com.trsrv.model;
 
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
@@ -20,9 +23,15 @@ public class User {
 	
 	private String name;
 	
-	@OneToMany(mappedBy="user")
-	private Set<Business> business;
+	//@OneToMany(mappedBy="user")
+	//private Set<Business> business;
 
+	@OneToMany(cascade=CascadeType.ALL)  
+    @JoinTable(name="user_business",  
+    	joinColumns={@JoinColumn(name="user_id", referencedColumnName="id")},  
+    	inverseJoinColumns={@JoinColumn(name="business_id", referencedColumnName="id")})  
+	private Set<Business> business;
+	
 	@OneToOne
 	private Contact contact;
 	

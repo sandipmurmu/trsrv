@@ -6,23 +6,21 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
-import javax.persistence.ManyToOne;
 
 @Entity
-@Inheritance(strategy=InheritanceType.TABLE_PER_CLASS)
+//@Inheritance(strategy=InheritanceType.TABLE_PER_CLASS)
 public abstract class Business implements Serializable {
 
 	@Id
-	//@GeneratedValue(strategy=GenerationType.AUTO)
-	public long id;
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private long id;
 	
 	private String businessName;
 	
-	@ManyToOne
-	private User user;
-
+	private long createdDate;
+	
+	private long modifiedDate;	
+	
 	public long getId() {
 		return id;
 	}
