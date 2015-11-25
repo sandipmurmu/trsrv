@@ -1,6 +1,7 @@
 package com.trsrv.model;
 
 import java.util.List;
+import java.util.Set;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -15,7 +16,7 @@ public class User {
 	
 	private String name;
 	
-	private List<Business> business;
+	private Set<Business> business;
 
 	private Contact contact;
 	

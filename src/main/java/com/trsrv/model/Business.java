@@ -2,11 +2,13 @@ package com.trsrv.model;
 
 
 
-public class Business {
+public abstract class Business {
 
 	
 	private long id;
 	
-	private String type;
+    private String type;
+	
+	
 	
 }
