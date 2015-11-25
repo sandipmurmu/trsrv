@@ -36,14 +36,6 @@ public class User {
 		this.consumerid = consumerid;
 	}
 
-	public List<Business> getBusiness() {
-		return business;
-	}
-
-	public void setBusiness(List<Business> business) {
-		this.business = business;
-	}
-
 	public String getName() {
 		return name;
 	}
@@ -51,6 +43,24 @@ public class User {
 	public void setName(String name) {
 		this.name = name;
 	}
+
+	public Set<Business> getBusiness() {
+		return business;
+	}
+
+	public void setBusiness(Set<Business> business) {
+		this.business = business;
+	}
+
+	public Contact getContact() {
+		return contact;
+	}
+
+	public void setContact(Contact contact) {
+		this.contact = contact;
+	}
+
+	
 	
 	
 	
