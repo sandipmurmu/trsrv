@@ -3,20 +3,27 @@ package com.trsrv.model;
 import java.util.Set;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 @Entity
 public class User {
 
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long id;
 	
 	private long consumerid;
 	
 	private String name;
 	
+	@OneToMany(mappedBy="user")
 	private Set<Business> business;
 
+	@OneToOne
 	private Contact contact;
 	
 	public long getId() {
@@ -58,10 +65,4 @@ public class User {
 	public void setContact(Contact contact) {
 		this.contact = contact;
 	}
-
-	
-	
-	
-	
-	
 }

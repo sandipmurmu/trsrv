@@ -20,8 +20,6 @@ public class TransrvTest {
 	@Autowired
 	private UserRepository userRepo;
 	
-	
-	
 	@Test
 	public void saveBiz(){
 		Business biz = new Merchant();
