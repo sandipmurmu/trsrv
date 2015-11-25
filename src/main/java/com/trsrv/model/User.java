@@ -1,6 +1,5 @@
 package com.trsrv.model;
 
-import java.util.List;
 import java.util.Set;
 
 import javax.persistence.Entity;
