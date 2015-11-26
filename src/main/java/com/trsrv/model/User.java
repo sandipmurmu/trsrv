@@ -46,6 +46,10 @@ public class User {
 	@OneToOne
 	private Contact contact;
 	
+	@OneToMany
+	private Set<Account> accounts;
+	
+	
 	public long getId() {
 		return id;
 	}
