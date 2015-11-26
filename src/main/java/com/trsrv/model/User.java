@@ -46,7 +46,7 @@ public class User {
 	@OneToOne
 	private Contact contact;
 	
-	@OneToMany
+	@OneToMany(mappedBy="user")
 	private Set<Account> accounts;
 	
 	
