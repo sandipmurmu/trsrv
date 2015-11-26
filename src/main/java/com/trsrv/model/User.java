@@ -22,6 +22,14 @@ public class User {
 	private long consumerid;
 	
 	private String name;
+
+	private String username;
+	
+	private String password;
+
+	private long createdDate;
+	
+	private long modifiedDate;
 	
 	//@OneToMany(mappedBy="user")
 	//private Set<Business> business;
@@ -31,6 +39,9 @@ public class User {
     	joinColumns={@JoinColumn(name="user_id", referencedColumnName="id")},  
     	inverseJoinColumns={@JoinColumn(name="business_id", referencedColumnName="id")})  
 	private Set<Business> business;
+	
+	@OneToOne
+	private UserProfile profile;
 	
 	@OneToOne
 	private Contact contact;
@@ -73,5 +84,45 @@ public class User {
 
 	public void setContact(Contact contact) {
 		this.contact = contact;
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public long getCreatedDate() {
+		return createdDate;
+	}
+
+	public void setCreatedDate(long createdDate) {
+		this.createdDate = createdDate;
+	}
+
+	public long getModifiedDate() {
+		return modifiedDate;
+	}
+
+	public void setModifiedDate(long modifiedDate) {
+		this.modifiedDate = modifiedDate;
+	}
+
+	public UserProfile getProfile() {
+		return profile;
+	}
+
+	public void setProfile(UserProfile profile) {
+		this.profile = profile;
 	}
 }

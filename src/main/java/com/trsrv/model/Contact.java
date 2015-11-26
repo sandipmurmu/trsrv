@@ -11,13 +11,13 @@ import javax.persistence.OneToMany;
 public class Contact {
 
 	@OneToMany(mappedBy="contact")
-	private Set<Phone> phones = new HashSet<>(0);;
+	private Set<Phone> phones = new HashSet<Phone>(0);;
 	
 	@OneToMany(mappedBy="contact")
-    private Set<Address> address = new HashSet<>(0);;
+    private Set<Address> address = new HashSet<Address>(0);;
 	
     @OneToMany(mappedBy="contact")
-	private Set<Email> emails = new HashSet<>(0);;
+	private Set<Email> emails = new HashSet<Email>(0);;
 	
 	@Id
 	public long id;
