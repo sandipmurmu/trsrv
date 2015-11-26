@@ -15,6 +15,8 @@ public class Phone {
 	
 	private String number;
 
+	private Boolean isPrimary;
+	
 	@ManyToOne
 	private Contact contact;
 	
@@ -41,4 +43,14 @@ public class Phone {
 	public void setContact(Contact contact) {
 		this.contact = contact;
 	}
+
+	public Boolean getIsPrimary() {
+		return isPrimary;
+	}
+
+	public void setIsPrimary(Boolean isPrimary) {
+		this.isPrimary = isPrimary;
+	}
+	
+	
 }

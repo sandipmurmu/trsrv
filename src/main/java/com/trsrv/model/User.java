@@ -19,7 +19,7 @@ public class User {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long id;
 	
-	private long consumerid;
+	private String consumerid;
 	
 	private String name;
 
@@ -54,11 +54,13 @@ public class User {
 		this.id = id;
 	}
 
-	public long getConsumerid() {
+	
+
+	public String getConsumerid() {
 		return consumerid;
 	}
 
-	public void setConsumerid(long consumerid) {
+	public void setConsumerid(String consumerid) {
 		this.consumerid = consumerid;
 	}
 
@@ -68,14 +70,6 @@ public class User {
 
 	public void setName(String name) {
 		this.name = name;
-	}
-
-	public Set<Business> getBusiness() {
-		return business;
-	}
-
-	public void setBusiness(Set<Business> business) {
-		this.business = business;
 	}
 
 	public Contact getContact() {
