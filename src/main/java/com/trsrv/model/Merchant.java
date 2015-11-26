@@ -13,9 +13,9 @@ public class Merchant extends Business {
 	
 	private BusinessType type = BusinessType.MERCHANT;
 	
-	@OneToMany(mappedBy="business")
+	/*@OneToMany(mappedBy="business")
 	private Set<Groups> groups;
-	
+	*/
 	
 	
 }
