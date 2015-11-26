@@ -3,7 +3,7 @@ package com.trsrv.model;
 import javax.persistence.Entity;
 
 @Entity
-public class Distributor extends Business {
+public class Remittance extends Business {
 
 	private BusinessType type = BusinessType.DISTRIBUTOR;
 	
@@ -11,5 +11,5 @@ public class Distributor extends Business {
 	
 	private Boolean isAgent;
 	
-	private Distributor parent;
+	private Remittance parent;
 }

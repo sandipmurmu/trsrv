@@ -47,7 +47,7 @@ public class User {
 	private Contact contact;
 	
 	@OneToMany(mappedBy="user")
-	private Set<Account> accounts;
+	private Set<Beneficiary> accounts;
 	
 	
 	public long getId() {

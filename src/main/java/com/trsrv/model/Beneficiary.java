@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
 @Entity
-public class Account {
+public class Beneficiary {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
