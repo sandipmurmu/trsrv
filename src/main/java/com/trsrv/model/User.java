@@ -1,5 +1,6 @@
 package com.trsrv.model;
 
+import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -22,15 +23,12 @@ public class User {
 	private long consumerid;
 	
 	private String name;
-	
-	//@OneToMany(mappedBy="user")
-	//private Set<Business> business;
 
 	@OneToMany(cascade=CascadeType.ALL)  
     @JoinTable(name="user_business",  
     	joinColumns={@JoinColumn(name="user_id", referencedColumnName="id")},  
     	inverseJoinColumns={@JoinColumn(name="business_id", referencedColumnName="id")})  
-	private Set<Business> business;
+	private Set<Business> business = new HashSet<>(0);
 	
 	@OneToOne
 	private Contact contact;
@@ -59,13 +57,13 @@ public class User {
 		this.name = name;
 	}
 
-	public Set<Business> getBusiness() {
+	/*public Set<Business> getBusiness() {
 		return business;
 	}
 
 	public void setBusiness(Set<Business> business) {
 		this.business = business;
-	}
+	}*/
 
 	public Contact getContact() {
 		return contact;
