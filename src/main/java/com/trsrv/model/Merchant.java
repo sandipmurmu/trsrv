@@ -7,7 +7,7 @@ import javax.persistence.Entity;
 public class Merchant extends Business {
 
 	
-	private BusinessType type = BusinessType.MERCHANT;
+	private BusinessType businessType = BusinessType.MERCHANT;
 	
 	
 	

@@ -5,7 +5,7 @@ import javax.persistence.Entity;
 @Entity
 public class Remittance extends Business {
 
-	private BusinessType type = BusinessType.DISTRIBUTOR;
+	private BusinessType businssType = BusinessType.DISTRIBUTOR;
 	
 	private Boolean isSuper;
 	
