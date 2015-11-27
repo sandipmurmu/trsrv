@@ -34,11 +34,11 @@ public class User {
 	//@OneToMany(mappedBy="user")
 	//private Set<Business> business;
 
-	@OneToMany(cascade=CascadeType.ALL)  
+	/*@OneToMany(cascade=CascadeType.ALL)  
     @JoinTable(name="user_business",  
     	joinColumns={@JoinColumn(name="user_id", referencedColumnName="id")},  
     	inverseJoinColumns={@JoinColumn(name="business_id", referencedColumnName="id")})  
-	private Set<Business> business;
+	private Set<Business> business;*/
 	
 	@OneToOne
 	private UserProfile profile;
