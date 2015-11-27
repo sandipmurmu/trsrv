@@ -19,6 +19,9 @@ public class Groups {
 	
 	private String groupName;
 	
+	private String groupCode;
+	
+	
 	@OneToMany
 	private Set<Role> roles;
 
@@ -56,6 +59,14 @@ public class Groups {
 
 	public void setBusiness(Business business) {
 		this.business = business;
+	}
+
+	public String getGroupCode() {
+		return groupCode;
+	}
+
+	public void setGroupCode(String groupCode) {
+		this.groupCode = groupCode;
 	}
 	
 	
